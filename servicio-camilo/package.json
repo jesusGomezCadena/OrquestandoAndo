@@ -1,0 +1,15 @@
+{
+  "name": "servicio-camilo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "serverCamilo.js",
+  "scripts": {
+    "start": "node serverCamilo.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
