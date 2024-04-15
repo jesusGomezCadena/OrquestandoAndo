@@ -9,7 +9,7 @@ spec:
     - name: servicio-cris-container
       image: criser2013/orquestando-lab:v1
       ports:
-        - containerPort: 3001
+        - containerPort: 5001
       resources:
         requests:
           cpu: 1
