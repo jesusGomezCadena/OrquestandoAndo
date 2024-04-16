@@ -1,0 +1,12 @@
+  {
+      "name": "alejandro_servicio",
+      "version": "1.0.0",
+      "description": "Nuevo servicio ",
+      "main": "alejandro_servicio.js",
+      "scripts": {
+        "start": "node alejandro_servicio.js"
+      },
+      "dependencies": {
+        "express": "^4.17.1"
+      }
+    }
