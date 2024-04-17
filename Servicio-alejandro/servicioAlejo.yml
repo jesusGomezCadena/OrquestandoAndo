@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: alejandro-pod
+spec:
+  containers:
+    - name: alejandro-container
+      image: alejo1234321/servicio-alejandro:latest
+      ports:
+        - containerPort: 306
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: alejandro-service
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 306
+  selector:
+    app: alejandro
