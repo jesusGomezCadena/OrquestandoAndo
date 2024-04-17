@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: servicio-jhon-pod
+  labels:
+    app: servicio-jhon
+spec:
+  containers:
+    - name: servicio-jhon-container
+      image: jhonsuescun/servicio-jhon:latest
+      ports:
+        - containerPort: 3005
+        
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: servicio-jhon-service
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 3005
+      protocol: TCP
+  selector:
+    app: servicio-jhon
