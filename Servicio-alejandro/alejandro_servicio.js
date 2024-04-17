@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 306;
+const port = 3006;
 
 app.get('/gustos', (req, res) => {
   res.json({ 

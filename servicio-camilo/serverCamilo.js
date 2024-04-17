@@ -12,3 +12,6 @@ app.get("/api/informacion", (req, res) => {
 app.listen(PORT, () => {
     console.log(`El servidor está activo corriendo en el puerto ${PORT}`);
 });
+
+
+
