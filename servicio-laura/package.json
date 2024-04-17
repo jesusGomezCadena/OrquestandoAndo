@@ -1,0 +1,15 @@
+{
+  "name": "servicio-laura",
+  "version": "1.0.0",
+  "description": "",
+  "main": "servicio_laura.js",
+  "scripts": {
+    "start": "node servicio_laura.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
