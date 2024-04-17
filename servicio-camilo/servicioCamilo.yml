@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: servicio-camilo-pod
+  labels:
+    app: servicio-camilo
+spec:
+  containers:
+    - name: servicio-camilo-container
+      image: juancortizgonz21/servicio-camilo:latest
+      ports:
+        - containerPort: 3004
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: servicio-camilo-service
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 3004
+      protocol: TCP
+  selector:
+    app: servicio-camilo  
