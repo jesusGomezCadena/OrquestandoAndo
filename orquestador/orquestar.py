@@ -41,10 +41,23 @@ async def orquestar():
 async def orquestar():
     async with httpx.AsyncClient() as client:
         try:
-            respuesta_cami = await client.get("http:/servicio-cami-service/api/information")
+            respuesta_cami = await client.get("http://servicio-camilo-service/api/informacion")
             data_cami = respuesta_cami.json()
         except httpx.RequestError:
+            print(httpx.RequestError)
             data_cami = "El servicio de Camilo no está disponible"
 
     return {"Persona": data_cami}
     
+
+
+@app.get("/laura")
+async def orquestar():
+    async with httpx.AsyncClient() as client:
+        try:
+            respuesta_laura = await client.get("http://servicio-laura-service/gustos")
+            data_laura = respuesta_laura.json()
+        except httpx.RequestError:
+            data_laura = "El servicio de Laura no está disponible"
+
+    return {"Persona": data_laura}

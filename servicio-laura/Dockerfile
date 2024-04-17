@@ -12,7 +12,7 @@ RUN npm init -y
 RUN npm install express
 
 # Expone el puerto en el que se ejecutará el servicio
-EXPOSE 3000
+EXPOSE 3001
 
 # Comando para ejecutar la aplicación
 CMD ["node", "servicio_laura.js"]
